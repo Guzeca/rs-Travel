@@ -1,0 +1,174 @@
+$base-font-size: 20px;
+$white: #fff;
+$main: #0D606F;;
+$orange: #F2785C;;
+
+
+@mixin ph {
+   @media (max-width: 700px) {
+      @content;
+   }
+}
+@mixin hh {
+   @media (max-width: 820px) {
+      @content;
+   }
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-size: $base-font-size;
+   font-family: 'Aleo';
+   font-weight: 400;
+   line-height: 1.5;
+   color: $main;
+   background-color: #FAFAFA;
+ 
+   @include ph {
+      // color: #fff;
+      // background-color: #000
+   }      
+}
+img {
+   vertical-align: top;
+}
+
+//**************************************
+.wrapper {
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+}
+
+[class*="__container"] {
+   max-width: 1320px;
+   margin: 0 auto ;
+}
+//HEADER
+.header {
+   position: relative;
+   z-index: 1;
+
+   background: rgba(242, 120, 92, 0.7);
+   box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+}
+
+.header__menu {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 25px 0px;
+}
+
+.menu-list {
+   display: flex;
+   gap: 42px;
+   list-style: none;
+}
+
+.menu-item a {
+   text-decoration: none;
+   color: $white;
+   opacity: 1;
+}
+.button {
+   text-decoration: none;
+   padding: 10px 30px;
+   color: #fff;
+   background-color: #0D606F;
+   border-radius: 10px;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+}
+// EXPLORE
+.explore__container {
+   min-height: 765px;
+}
+.explore {
+   min-width: 1440px;
+
+   background-image: url(../img/mouth.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+
+   transform: translateY(-100px);
+   padding-top: 125px;
+}
+.explore-main {
+   display: flex;
+   flex-direction: column;
+}
+.explore-title {
+   font-style: normal;
+   font-weight: 700;
+   font-size: 80px;
+   line-height: 96px;
+
+   width: 850px;
+
+   color: $white;
+}
+.explore-text {
+   font-style: italic;
+
+   color: $white;
+
+   margin: 56px 0px 46px 0px;
+}
+.explore-planning {
+   max-width: 900px;
+
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   padding: 18px 18px 18px 42px;
+   
+   background: rgba(255, 255, 255, 0.7);
+   border-radius: 16px;
+}
+.wouldYouLike {
+   font-size: 24px;
+
+   color: $orange;
+}
+// STEPS
+.steps-main {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+}
+.desc {
+   width: 100%;
+
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   text-align: center;
+}
+.steps-title {
+   color:$orange;
+   font-weight: 500;
+   font-size: 40px;
+   line-height: 53px;
+
+   margin-bottom: 40px;
+}
+.desc-text {
+   color: $main;
+
+   margin-top: 30px;
+}
+
+
+
+
+
+@import "block/*.scss";
