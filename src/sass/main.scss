@@ -153,11 +153,12 @@ img {
    align-items: center;
    text-align: center;
 }
-.steps-title {
+.main-title {
    color:$orange;
    font-weight: 500;
    font-size: 40px;
    line-height: 53px;
+   text-align: center;
 
    margin-bottom: 40px;
 }
@@ -166,6 +167,75 @@ img {
 
    margin-top: 30px;
 }
+// destination
+.destination {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+
+   margin-top: 100px;
+}
+.destination-country {
+   display: flex;
+
+   gap: 60px;
+}
+.sliders-control {
+   display: flex;
+   width: 100px;
+   justify-content: space-between;
+}
+.slider-button {
+   cursor: pointer;
+
+   margin: 24px 0px 40px 0px;
+
+   width: 20px;
+   height: 20px;
+
+   background-color: $orange;
+   opacity: 0.5;
+   border: 2px solid #000;
+   border-radius: 50%;
+}
+.destination-country{
+   img {
+      transition: transform .4s ease;
+   }
+}
+// SLIDER
+
+.spain {
+   order: 1;
+}
+.japan {
+   order: 2;
+}
+.usa {
+   order: 3;
+}
+
+.current {
+   opacity: 1;
+}
+.current-slide {
+   order: 2;
+}
+.current-slide-left {
+   order: -1;
+}
+.current-slide-right {
+   order: 5;
+}
+
+
+
+
+
+ 
+
+
 
 
 
