@@ -39,6 +39,11 @@ img {
    vertical-align: top;
 }
 
+@keyframes fadein {
+   0%   { opacity: 0; }
+   100% { opacity: 1; }
+}
+
 //**************************************
 .wrapper {
    overflow: hidden;
@@ -79,6 +84,7 @@ img {
    opacity: 1;
 }
 .button {
+   text-align: center;
    text-decoration: none;
    padding: 10px 30px;
    color: #fff;
@@ -177,9 +183,11 @@ img {
    margin-top: 100px;
 }
 .destination-country {
-   display: flex;
+   display: none;
 
    gap: 60px;
+
+   animation: fadein .9s;
 }
 .sliders-control {
    display: flex;
@@ -199,35 +207,41 @@ img {
    border: 2px solid #000;
    border-radius: 50%;
 }
-.destination-country{
-   img {
-      transition: transform .4s ease;
-   }
+.destination-button {
+   position: relative;
+
+   padding: 15px 30px 15px 80px;
+
+   margin-bottom: 100px;
 }
+.destination-button::before {
+   content: '';
+   position: absolute;
+
+   width: 40px;
+   height: 40px;
+
+   left: 30px;
+   top: 8px;
+
+   background-image: url('../img/arrow.svg');
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.find-more {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
 // SLIDER
-
-.spain {
-   order: 1;
-}
-.japan {
-   order: 2;
-}
-.usa {
-   order: 3;
-}
-
 .current {
    opacity: 1;
 }
 .current-slide {
-   order: 2;
+   display: flex;
 }
-.current-slide-left {
-   order: -1;
-}
-.current-slide-right {
-   order: 5;
-}
+
 
 
 

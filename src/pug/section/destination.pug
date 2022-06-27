@@ -1,12 +1,30 @@
-section.destination
+section.destination  
    .destination
       h2.main-title POPULAR DESTINATIONS
-      .destination-country
-         img.spain(src="img/Spain.png", alt="Spain" id='spain')
-         img.japan(src="img/Japan.png", alt="Japan" id='japan')
-         img.usa(src="img/USA.png", alt="USA" id='usa')
+      .destination-country(id='country_1')
+         .country-image  
+            img.japan(src="img/Japan.png", alt="Japan")
+         .country-image
+            img.spain(src="img/Spain.png", alt="Spain")
+         .country-image  
+            img.usa(src="img/USA.png", alt="USA")
+      .destination-country.current-slide(id='country_2') 
+         .country-image
+            img.spain(src="img/Spain.png", alt="Spain")
+         .country-image
+            img.japan(src="img/Japan.png", alt="Japan")
+         .country-image
+            img.usa(src="img/USA.png", alt="USA")
+      .destination-country(id='country_3') 
+         .country-image
+            img.spain(src="img/Spain.png", alt="Spain")
+         .country-image  
+            img.usa(src="img/USA.png", alt="USA")
+         .country-image  
+            img.japan(src="img/Japan.png", alt="Japan")
       .sliders-control
-         button.slider-button(type='button' id='one')
-         button.slider-button.current(type='button' id='two')
-         button.slider-button(type='button' id='three')
-      a.button Find More.slider-button
+         button.slider-button(type='button' data-country='#country_1')
+         button.slider-button.current(type='button' data-country='#country_2')
+         button.slider-button(type='button' data-country='#country_3')
+      .find-more
+         a.button.destination-button(href="#")  Find More
